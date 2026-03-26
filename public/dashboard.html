@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - NEET Biology PYQ</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-page="dashboard">
+  <div class="shell">
+    <div class="topbar">
+      <div class="nav">
+        <div class="brand"><div id="dashAvatar" class="logo"></div><div><h1 id="helloName">NEET Biology PYQ</h1><p id="helloMeta">Dashboard</p></div></div>
+        <div class="nav-actions"><button class="pill" id="themeBtn">Dark</button><button class="pill" id="langBtn">English</button><button class="pill" id="soundBtn">Sound On</button></div>
+      </div>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="row"><span class="badge" data-i18n="badgeBio">Biology only</span><span class="badge" data-i18n="badgeModes">Practice / Exam / Hard</span><span class="badge" data-i18n="badgePlain">Secure MongoDB storage</span></div>
+        <h2 data-i18n="dashTitle">Serious NEET Biology simulation</h2>
+        <p data-i18n="dashText">Hints appear only in Practice Mode. Exam Mode and Hard Mode stay strict.</p>
+      </section>
+
+      <section class="grid two">
+        <div class="card">
+          <div class="spread">
+            <div><h3>My Profile</h3><div class="subtle">Avatar preview, score, and settings</div></div>
+            <div class="row"><a class="pill" href="/profile">Profile</a><button class="pill" id="logoutBtn">Logout</button></div>
+          </div>
+          <div class="hr"></div>
+          <div class="stats" id="stats"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="weeklyTopper">Weekly topper</h3>
+          <div id="weeklyTopperBox" class="item">Loading...</div>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <div class="card">
+          <div class="spread"><h3 data-i18n="testsTitle">Tests</h3><button class="pill" id="refreshTests" data-i18n="refresh">Refresh</button></div>
+          <div class="tabrow"><button class="chip active" data-mode="practice">Practice</button><button class="chip" data-mode="exam">Exam</button><button class="chip" data-mode="hard">Hard</button></div>
+          <div class="hr"></div>
+          <div class="list" id="testsList"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="searchUsers">User search</h3>
+          <div class="stack"><input class="input" id="searchBox" placeholder="Search username or name" /><button class="btn" id="searchBtn">Search</button></div>
+          <div class="hr"></div>
+          <div id="searchResults" class="list"></div>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <div class="card"><h3 data-i18n="analyticsTitle">Analytics</h3><div id="analyticsBox" class="list"></div></div>
+        <div class="card"><h3 data-i18n="suggestionsTitle">Suggestions</h3><div id="suggestionsBox" class="list"></div></div>
+      </section>
+
+      <section class="card">
+        <div class="spread"><h3>Leaderboard</h3><button class="pill" id="openLeaderboard">Open</button></div>
+      </section>
+    </main>
+  </div>
+  <div class="modal" id="modal"><div class="panel" id="modalPanel"></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>

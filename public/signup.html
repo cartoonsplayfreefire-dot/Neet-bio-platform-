@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - NEET Biology PYQ</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-page="signup">
+  <div class="shell">
+    <div class="topbar">
+      <div class="nav">
+        <div class="brand"><div class="logo"></div><div><h1 data-i18n="appTitle">NEET Biology PYQ</h1><p data-i18n="appSubtitle">Premium test practice platform</p></div></div>
+        <div class="nav-actions"><button class="pill" id="themeBtn">Dark</button><button class="pill" id="langBtn">English</button><button class="pill" id="soundBtn">Sound On</button></div>
+      </div>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="row"><span class="badge" data-i18n="badgeBio">Biology only</span><span class="badge" data-i18n="badgeModes">Practice / Exam / Hard</span><span class="badge" data-i18n="badgePlain">Secure MongoDB storage</span></div>
+        <h2 data-i18n="signupHeroTitle">Create your account</h2>
+        <p data-i18n="signupHeroText">Sign up first, then use login for the next 3 days without signing in again.</p>
+      </section>
+      <section class="card">
+        <div class="spread"><h3 data-i18n="signupTitle">Sign up</h3><span class="badge" data-i18n="signupBadge">Create a new account</span></div>
+        <div class="stack">
+          <input class="input" id="signupName" placeholder="Name" data-i18n-placeholder="name" />
+          <input class="input" id="signupUser" placeholder="Username" data-i18n-placeholder="username" />
+          <input class="input" id="signupPass" placeholder="Password" type="password" data-i18n-placeholder="password" />
+          <button class="btn primary" id="signupBtn" data-i18n="createAccount">Create account</button>
+          <div class="small"><span data-i18n="haveAccount">Already have an account?</span> <a href="/" style="text-decoration:underline;" data-i18n="loginLink">Login here</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

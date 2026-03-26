@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-page="admin">
+  <div class="shell">
+    <div class="topbar">
+      <div class="nav">
+        <div class="brand"><div class="logo"></div><div><h1>Admin Panel</h1><p>Protected access only</p></div></div>
+        <div class="nav-actions"><button class="pill" id="adminHomeBtn">Home</button><button class="pill" id="adminRefreshBtn">Refresh</button><button class="pill" id="adminLogoutBtn">Logout</button></div>
+      </div>
+    </div>
+    <main>
+      <section class="grid two">
+        <div class="card"><h3>Overview</h3><div id="adminStats" class="stats"></div></div>
+        <div class="card"><h3>Import test JSON</h3><div class="stack"><input class="input" id="jsonFile" type="file" accept=".json,application/json" /><button class="btn primary" id="uploadJsonBtn">Import</button></div></div>
+      </section>
+      <section class="grid two">
+        <div class="card"><div class="spread"><h3>Reports</h3><button class="pill" id="loadReportsBtn">Load</button></div><div id="reportsBox" class="list"></div></div>
+        <div class="card"><div class="spread"><h3>Users</h3><button class="pill" id="loadUsersBtn">Load</button></div><div id="usersBox" class="list"></div></div>
+      </section>
+      <section class="card">
+        <h3>Create / Edit Biology Full Test</h3>
+        <div class="stack">
+          <input class="input" id="tId" placeholder="test id (optional)" />
+          <input class="input" id="tTitle" placeholder="title" />
+          <textarea class="textarea" id="tQuestions" placeholder='Paste questions JSON array here'></textarea>
+          <button class="btn primary" id="saveTestBtn">Save Test</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal" id="modal"><div class="panel" id="modalPanel"></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile - NEET Biology PYQ</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-page="profile">
+  <div class="shell">
+    <div class="topbar">
+      <div class="nav">
+        <div class="brand"><div class="logo"></div><div><h1 data-i18n="profileTitle">Profile</h1><p data-i18n="profileSubtitle">Edit picture, password, privacy, and contacts</p></div></div>
+        <div class="nav-actions"><button class="pill" id="themeBtn">Dark</button><button class="pill" id="langBtn">English</button><button class="pill" id="soundBtn">Sound On</button></div>
+      </div>
+    </div>
+    <main>
+      <section class="card">
+        <div class="row"><img id="profilePreview" src="" alt="Profile preview" style="width:84px;height:84px;border-radius:22px;object-fit:cover;display:none;" /><div><h3 id="profileName">Profile</h3><div class="subtle" id="profileUser"></div></div></div>
+        <div class="hr"></div>
+        <div class="stack">
+          <input class="input" id="pName" placeholder="Name" />
+          <input class="input" id="pPic" type="file" accept="image/*" />
+          <div class="small">Upload profile picture from device storage.</div>
+          <input class="input" id="pInsta" placeholder="Instagram" />
+          <input class="input" id="pWhats" placeholder="WhatsApp" />
+          <input class="input" id="pPass" placeholder="New password" type="password" />
+          <select class="select" id="pPriv"><option value="private">Private</option><option value="public">Public</option></select>
+          <div class="row"><button class="btn primary" id="saveProfile">Save</button><a class="btn" href="/dashboard">Back</a><button class="btn" id="deleteAccount">Delete account</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal" id="modal"><div class="panel" id="modalPanel"></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>

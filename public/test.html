@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-page="test">
+  <div class="shell">
+    <div class="topbar">
+      <div class="nav">
+        <div class="brand"><div class="logo"></div><div><h1 id="testTitle">Test</h1><p id="testMeta">Loading...</p></div></div>
+        <div class="nav-actions"><button class="pill" id="homeBtn">Home</button><button class="pill" id="pauseBtn">Pause</button><button class="pill" id="saveBtn">Save</button><button class="pill" id="reportBtn">Report</button></div>
+      </div>
+    </div>
+    <main>
+      <section class="grid two">
+        <div class="card">
+          <div class="spread"><div><h3 id="qCounter">Question</h3><div class="subtle" id="qMeta"></div></div><div class="row"><span class="badge" id="timerBox">00:00</span><span class="badge" id="modeBox">Practice</span></div></div>
+          <div class="hr"></div>
+          <div class="question-card">
+            <div class="q-title" id="questionText"></div>
+            <div id="hintText" class="small" style="margin-top:10px;"></div>
+            <div class="options" id="options"></div>
+          </div>
+          <div class="hr"></div>
+          <div class="row"><button class="btn" id="blankBtn">Mark Blank</button><button class="btn" id="markBtn">Mark Review</button><button class="btn" id="bookmarkBtn">Bookmark</button><button class="btn primary" id="submitBtn">Submit</button></div>
+        </div>
+        <div class="card">
+          <h3>Question palette</h3>
+          <div class="palette" id="palette"></div>
+          <div class="hr"></div>
+          <div id="sidePanel" class="list"></div>
+        </div>
+      </section>
+    </main>
+    <div class="footerbar">
+      <div class="footer-actions"><div class="row"><button class="pill" id="prevBtn">Previous</button><button class="pill" id="nextBtn">Next</button></div><div class="row"><button class="pill" id="resumeBtn">Resume</button><button class="pill" id="resultsBtn">Results</button></div></div>
+    </div>
+  </div>
+  <div class="modal" id="modal"><div class="panel" id="modalPanel"></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>
